@@ -5,23 +5,23 @@
 class JjTui < Formula
   desc "A modern Terminal User Interface for managing Jujutsu repositories"
   homepage "https://github.com/madicen/jj-tui"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   depends_on "jj" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/madicen/jj-tui/releases/download/v0.5.0/jj-tui_0.5.0_darwin_amd64.tar.gz"
-      sha256 "4e056d61e4ddb6f3777e15d36ac9397aded2217bac90586ce91b8a7f2ae249bf"
+      url "https://github.com/madicen/jj-tui/releases/download/v0.5.1/jj-tui_0.5.1_darwin_amd64.tar.gz"
+      sha256 "b5686ead252e25e1d87382d849d021eca5a9807c385c173f3731d7facfa1ffbe"
 
       define_method(:install) do
         bin.install "jj-tui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/madicen/jj-tui/releases/download/v0.5.0/jj-tui_0.5.0_darwin_arm64.tar.gz"
-      sha256 "b7de2afcd7785066e5b419777728c8acdcdc541d24c49d1b0d7dddefd57a0756"
+      url "https://github.com/madicen/jj-tui/releases/download/v0.5.1/jj-tui_0.5.1_darwin_arm64.tar.gz"
+      sha256 "d7d98e9812d8539b140c0280f4ffc2a819a0b989ed80565138515c3d04396c2a"
 
       define_method(:install) do
         bin.install "jj-tui"
@@ -31,15 +31,15 @@ class JjTui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/madicen/jj-tui/releases/download/v0.5.0/jj-tui_0.5.0_linux_amd64.tar.gz"
-      sha256 "3015229321241efdbfe67cb0a7fd3ebd71e3fcb69ac48d63c33fe7c1b057a2d5"
+      url "https://github.com/madicen/jj-tui/releases/download/v0.5.1/jj-tui_0.5.1_linux_amd64.tar.gz"
+      sha256 "31063b4256600bf148c8f5ed4baa2619cef876cff966a3dcc62f2677442d523f"
       define_method(:install) do
         bin.install "jj-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/madicen/jj-tui/releases/download/v0.5.0/jj-tui_0.5.0_linux_arm64.tar.gz"
-      sha256 "1d5e2ce1ead8af0aac1be63f013113477421841b7a55ed9c14ef015085b2c7f4"
+      url "https://github.com/madicen/jj-tui/releases/download/v0.5.1/jj-tui_0.5.1_linux_arm64.tar.gz"
+      sha256 "03486197b6a16a820b30bf4f4d73694d322d47835bc33598fafcdaf6447f1070"
       define_method(:install) do
         bin.install "jj-tui"
       end
